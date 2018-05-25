@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match-match game</title>
+    <link rel="stylesheet" href="css/normalize.css">  
+    <link rel="stylesheet" href="css/style.css">  
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:500" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <main>
+        <section class="start-page" id="start-page">
+            <h1>Match-Match Game</h1>
+            <h2>How to play</h2>
+            <p>
+                The objective of the game is to find all the pairs. Select two cards to find a pair, 
+                match all the cards to complete the game.
+            </p>
+            <p>
+                Please, fill in all form fields and push the button «CONTINUE»
+            </p>
+            <form class="registration">
+                <input class="input" id="first-name" name="firstName" type="text" placeholder="Your First Name" required>
+                <input class="input" id="last-name" name="lastName" placeholder="Your Last Name" type="text" required>
+                <input class="input" id="email" name="email" type="email" placeholder="Your Email" required>
+                <input class="button" type="submit" id="submit-button" value="CONTINUE">
+            </form>
+        </section>
+        <section class="settings-page invisible" id="settings-page">
+            <h2>Select difficulty</h2>
+            <div class="settings" id="difficulty">
+                <div class="level settings-item selected" id="easy">EASY</div>
+                <div class="level settings-item" id="medium">MEDIUM</div>
+                <div class="level settings-item" id="hard">HARD</div>
+            </div>
+            <h2>Select back</h2>
+            <div class="settings" id = "backgrounds">
+                <img class="settings-item selected" id="football" src="img/backs/football.jpg" alt="football">
+                <img class="settings-item " id="cars" src="img/backs/cars.jpg" alt="cars">
+                <img class="settings-item " id="games" src="img/backs/games.jpg" alt="games">
+            </div>
+            <button class="button" id="start-button">START GAME</button>
+        </section>
+        <section class="game-page invisible" id="game-page">
+            <div class="game-header">
+                <button class="button pause-button" id="pause-button">PAUSE</button>
+                <div class="timer" id="timer">0:00</div>
+                <button class="button exit-button" id="main-menu">EXIT</button>
+            </div>
+        </section> 
+        <section class="pause-page invisible" id="pause-page">
+            <h2>PAUSE</h2>
+            <p>Click anywhere to resume game</p>
+        </section>
+        <section class="congratulations invisible" id="congratulations-page">
+            <h2>CONGRATULATIONS!</h2>
+            <p>Your result is: <span id=result></span></p>
+            <h3>TOP RESULTS</h3>
+            <p class="score-level" id="level"></p>
+            <div class="score-list" id="score"></div>
+            <button class="button" id="play again">PLAY AGAIN</button>
+        </section>
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
